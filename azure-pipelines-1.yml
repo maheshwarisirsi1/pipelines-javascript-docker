@@ -6,6 +6,11 @@
 trigger:
 - main
 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerhub'
+    command: 'login'
+
 pool:
   vmImage: 'ubuntu-latest' 
 
