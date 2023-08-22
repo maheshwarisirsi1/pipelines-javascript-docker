@@ -28,7 +28,7 @@ steps:
   displayName: 'List Docker Images'
 - task: aquasecScanner@4
   inputs:
-    image: 'docker.io/library/pipelines-javascript-docker:$(Build.BuildId)'
+    image: 'pipelines-javascript-docker:$(Build.BuildId)'
     scanType: 'local'
     containerRuntime: 'docker'
     register: true
