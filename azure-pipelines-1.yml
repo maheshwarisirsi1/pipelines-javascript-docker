@@ -31,7 +31,7 @@ steps:
     image: 'pipelines-javascript-docker:$(Build.BuildId)'
     scanType: 'local'
     containerRuntime: 'docker'
-    register: true
+    register: false
     hideBase: false
     showNegligible: false
     windowsScannerVersion: '6.5.0'
