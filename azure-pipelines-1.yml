@@ -36,5 +36,5 @@ steps:
     showNegligible: false
     windowsScannerVersion: '6.5.0'
     scanner: 'registry.aquasec.com/scanner:2022.4.373'
-    runOptions: '-e AQUA-TOKEN=7bf6d0392fcfb6cea1ca5364a65583d556ab92a3'
+    runOptions: '-e AQUA-TOKEN=7bf6d0392fcfb6cea1ca5364a65583d556ab92a3 -e SCALOCK_LOG_LEVEL=DEBUG'
     connection: 'aqua'
