@@ -23,6 +23,7 @@ steps:
   inputs:
     containerRegistry: 'aquareg'
     command: 'login'
+    command: 'images'
 - task: aquasecScanner@4
   inputs:
     image: 'docker.io/library/pipelines-javascript-docker:$(Build.BuildId)'
