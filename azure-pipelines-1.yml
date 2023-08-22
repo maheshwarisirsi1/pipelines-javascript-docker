@@ -21,7 +21,7 @@ steps:
     Dockerfile: app/Dockerfile
 - task: aquasecScanner@4
   inputs:
-    image: '$(imagename)'
+    image: 'docker.io/library/pipelines-javascript-docker:$(Build.BuildId)'
     scanType: 'local'
     register: true
     hideBase: false
