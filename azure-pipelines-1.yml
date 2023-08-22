@@ -39,6 +39,17 @@ steps:
     image: 'docker.io/library/pipelines-javascript-docker:$(Build.BuildId)'
     scanType: 'local'
     containerRuntime: 'docker'
+- task: aquasecScanner@4
+  inputs:
+    image: 'pipelines-javascript-docker:$(Build.BuildId)'
+    scanType: 'local'
+    containerRuntime: 'docker'
+    register: false
+    hideBase: false
+    showNegligible: false
+    windowsScannerVersion: '6.5.0'
+    scanner: 'registry.aquasec.com/scanner:2022.4.373'
+    connection: 'aqua'
     register: false
     hideBase: false
     showNegligible: false
