@@ -23,11 +23,11 @@ steps:
   inputs:
     image: 'docker.io/library/pipelines-javascript-docker:$(Build.BuildId)'
     scanType: 'local'
+    containerRuntime: 'docker'
     register: true
     hideBase: false
     showNegligible: false
     windowsScannerVersion: '6.5.0'
-    scanner: 'registry.aquasec.com/scanner:2022.4'
+    scanner: 'registry.aquasec.com/scanner:2022.4.373'
     runOptions: '-e AQUA-TOKEN=7bf6d0392fcfb6cea1ca5364a65583d556ab92a3'
     connection: 'aqua'
-    customFlags: '--direct-cc'
